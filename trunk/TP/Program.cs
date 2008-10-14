@@ -12,13 +12,45 @@ namespace TP
     {
         internal static readonly string rutaTp1 = @"D:\Fer\Facultad\RI\TP1";
         internal static readonly string archCorpus = Path.Combine(rutaTp1, "corpus");
+        internal static readonly string archQuerys = Path.Combine(rutaTp1, "querys");
         internal static readonly string dirIndices = Path.Combine(rutaTp1, "Indices");
 
         [STAThread]
         public static void Main(String[] args)
         {
-                Indexar();
-                Buscar();            
+            //Indexar();
+            CalcularPrecision();
+            //Buscar();
+        }
+
+        private static void CalcularPrecision()
+        {
+            var qp = new MultiFieldQueryParser(new []{"T","W"}, new StandardAnalyzer());
+            StreamReader reader = new StreamReader(archQuerys);
+            Query query;
+            string querystring = "";
+            string linea = reader.ReadLine();
+
+            while(linea!=null)
+            {                
+                if( linea.StartsWith("<title> "))
+                    querystring = "T:(" + linea.Substring(8) + ") OR ";
+                if (linea.StartsWith("<desc> "))
+                {
+                    querystring += "W:(" + linea.Substring(7) + ")";
+                    query = qp.Parse(querystring);
+                    var buscador = new IndexSearcher(dirIndices);
+                    Hits hits = buscador.Search(query);
+                    int hasta = Math.Min(hits.Length(), 10);
+                    for (int i = 0; i < hasta; i++)
+                    {
+                        Document doc = hits.Doc(i);
+                        Console.Out.WriteLine(i + doc.GetField("I").StringValue() + " (" + hits.Score(i) + ") [" +
+                                              doc.GetField("T").StringValue() + "]");
+                    }
+                }
+                linea = reader.ReadLine();
+            }            
         }
 
         private static void Buscar()
@@ -106,5 +138,12 @@ namespace TP
             }
             return doc;
         }
+    }
+
+    public class PrecisionRecallRPrecision
+    {
+        public float Precision;
+        public float RPrecision;
+        public float Recall;
     }
 }
