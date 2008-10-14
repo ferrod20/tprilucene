@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Collections.Specialized;
 using System.IO;
 using Lucene.Net.Analysis.Standard;
 using Lucene.Net.Documents;
@@ -10,17 +12,40 @@ namespace TP
 {
     internal class Program
     {
+        private static IDictionary<string, IList<string>> diccionario;
         internal static readonly string rutaTp1 = @"D:\Fer\Facultad\RI\TP1";
         internal static readonly string archCorpus = Path.Combine(rutaTp1, "corpus");
         internal static readonly string archQuerys = Path.Combine(rutaTp1, "querys");
+        internal static readonly string archResults = Path.Combine(rutaTp1, "results");
         internal static readonly string dirIndices = Path.Combine(rutaTp1, "Indices");
+
+
 
         [STAThread]
         public static void Main(String[] args)
         {
+            diccionario = new Dictionary<string, IList<string>>();
+            ObtenerResultadosDelQuery();
             //Indexar();
             CalcularPrecision();
             //Buscar();
+        }
+
+        private static void ObtenerResultadosDelQuery()
+        {
+            StreamReader reader = new StreamReader(archResults);
+            string linea = reader.ReadLine();
+            string[] pedazos;
+
+            while (linea != null)
+            {
+                pedazos = linea.Split('\t');
+                if (!diccionario.ContainsKey(pedazos[0]))                                    
+                    diccionario.Add(pedazos[0], new List<string>());
+
+                diccionario[pedazos[0]].Add(pedazos[1]);
+                linea = reader.ReadLine();
+            }
         }
 
         private static void CalcularPrecision()
