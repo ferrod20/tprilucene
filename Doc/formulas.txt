@@ -1,0 +1,8 @@
+recall = relevantes recuperados/relevantes
+p:precision = relevantes recuperados/ recuperados
+
+
+f-measure:(1+alfa).r.p/(r+alfa.p)
+
+precision r: tomo los primeros #relevantes documentos que me devuelve la consulta y calculo la precision.
+precision k: idem anterior tomando k
