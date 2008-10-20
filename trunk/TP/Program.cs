@@ -15,6 +15,7 @@ namespace TP
         internal static readonly string rutaTp1 = @"D:\Fer\Facultad\RI\TP1";
         internal static readonly string archCorpus = Path.Combine(rutaTp1, "corpus");
         internal static readonly string archQuerys = Path.Combine(rutaTp1, "querys");
+        internal static readonly string archResultadoDevuelto = Path.Combine(rutaTp1, "result.txt");
         internal static readonly string archResults = Path.Combine(rutaTp1, "results");
         internal static readonly string dirIndices = Path.Combine(rutaTp1, "Indices");        
         private static IDictionary<string, IList<string>> diccionario;
@@ -44,73 +45,69 @@ namespace TP
                 Console.Out.WriteLine(i + "-" + doc.GetField("I").StringValue() + " (" + hits.Score(i) + ") [" + doc.GetField("T").StringValue() + "]");
             }
         }
-        private static void CalcularPrecision()
+        private static IList<Medicion> Medir()
         {
-            IList<PrecisionRecallRPrecision> resultados = new List<PrecisionRecallRPrecision>();
+            IList<Medicion> resultados = new List<Medicion>();
             StreamReader reader = new StreamReader(archQuerys);
-            QueryParser parser = new MultiFieldQueryParser(new[] { "T", "W" }, new StandardAnalyzer());
-            var indexSearcher = new IndexSearcher(dirIndices);
-            string query = "", nombreDelQuery = "",linea = reader.ReadLine();                        
+            QueryParser parser = new MultiFieldQueryParser(new[] {"T", "W"}, new StandardAnalyzer());
+            Searcher indexSearcher = new IndexSearcher(dirIndices);
+            string query = "", nombreDelQuery = "", linea = reader.ReadLine();
 
             while (linea != null)
             {
                 if (linea.StartsWith("<num> Number: "))
                     nombreDelQuery = linea.Substring(14);
-                 if (linea.StartsWith("<title> "))
+                if (linea.StartsWith("<title> "))
                     query = linea.Substring(8);
                 if (linea.StartsWith("<desc> Description:"))
                 {
                     query += " " + reader.ReadLine();
-                    resultados.Add(Buscar(nombreDelQuery, query, parser, indexSearcher));
+                    resultados.Add(MedirConsulta(nombreDelQuery, query, parser, indexSearcher));
                 }
                 linea = reader.ReadLine();
             }
-
-            ImprimirResultados(resultados);
+            return resultados;            
         }
-        private static void ImprimirResultados(IList<PrecisionRecallRPrecision> resultados)
+        private static Hits EjecutarConsulta(QueryParser qp, string querystring, Searcher buscador)
         {
+            Query query;
+            Hits hits;
+            query = qp.Parse(querystring);
+            hits = buscador.Search(query);
+            return hits;
+        }
+        private static void GrabarResultados(IList<Medicion> resultados)
+        {
+            var sw = new StreamWriter(archResultadoDevuelto);
+
             int cantResultados = resultados.Count;
-            float totalPrecision = 0,totalRecall = 0,totalRPrecision = 0;
-            foreach(PrecisionRecallRPrecision resultado in  resultados)
+            float totalPrecision = 0, totalRecall = 0, totalRPrecision = 0, totalKPrecision = 0, totalFMeasure = 0;
+
+            foreach (Medicion resultado in  resultados)
             {
                 totalPrecision += resultado.Precision;
                 totalRecall += resultado.Recall;
                 totalRPrecision += resultado.RPrecision;
-            }
-            
-            Console.WriteLine("Promedio precision: " + totalPrecision / cantResultados);
-            Console.WriteLine("Promedio recall: " + totalRecall / cantResultados);
-            Console.WriteLine("Promedio R-Precision: " + totalRPrecision / cantResultados);
-        }
-        private static PrecisionRecallRPrecision Buscar(string nombreDelQuery, string querystring, QueryParser qp, IndexSearcher buscador)
-        {
-            IList<string> items;
-            Query query;
-            Hits hits;
-            Document doc;
-            float itemsDevueltos,itemsRelevantesDevueltos,itemsRelevantes;
+                totalKPrecision += resultado.KPrecision;
+                totalFMeasure += resultado.FMeasure;
 
-            query = qp.Parse(querystring);
-            hits = buscador.Search(query);
-            
-            itemsDevueltos = hits.Length();
-            itemsRelevantesDevueltos = 0;
-            items = diccionario[nombreDelQuery];
-            itemsRelevantes = items.Count;
-
-            for (int i = 0; i < itemsDevueltos; i++)
-            {
-                doc = hits.Doc(i);
-                if (items.Contains(doc.GetField("I").StringValue()))
-                    itemsRelevantesDevueltos++;
+                sw.WriteLine(resultado.NombreDelquery);
+                sw.WriteLine("Precision: " + resultado.Precision);
+                sw.WriteLine("Recall: " + resultado.Recall);
+                sw.WriteLine("R-Precision: " + resultado.RPrecision);
+                sw.WriteLine("K-Precision: " + resultado.KPrecision);
+                sw.WriteLine("F-Measure: " + resultado.FMeasure);
+                sw.WriteLine();
             }
 
-            var valor = new PrecisionRecallRPrecision();
-            valor.Precision = itemsRelevantesDevueltos/itemsDevueltos;
-            valor.Recall = itemsRelevantesDevueltos/itemsRelevantes;
-
-            return valor;
+            sw.WriteLine();
+            sw.WriteLine("Promedio");
+            sw.WriteLine("Promedio precision: " + totalPrecision/cantResultados);
+            sw.WriteLine("Promedio recall: " + totalRecall/cantResultados);
+            sw.WriteLine("Promedio R-Precision: " + totalRPrecision/cantResultados);
+            sw.WriteLine("Promedio K-Precision: " + totalKPrecision/cantResultados);
+            sw.WriteLine("Promedio F-Measure: " + totalFMeasure/cantResultados);
+            sw.Close();
         }
 
         private static void Indexar()
@@ -121,14 +118,14 @@ namespace TP
             string linea = reader.ReadLine();
 
             while (linea != null)
-                writer.AddDocument(Leer(reader, ref linea));
+                writer.AddDocument(ObtenerDocumento(reader, ref linea));
 
             writer.Optimize();
             writer.Close();
             reader.Close();
         }
 
-        private static Document Leer(StreamReader reader, ref string linea)
+        private static Document ObtenerDocumento(StreamReader reader, ref string linea)
         {
             #region Doc ejemplo
             //.I 1
@@ -149,23 +146,22 @@ namespace TP
             #endregion
 
             var doc = new Document();
-            // doc.Add(new Field("I", linea, Field.Store.YES, Field.Index.NO));
             while (linea != null)
             {
                 switch (linea)
                 {
                     case ".U":
-                        doc.Add(new Field("I", reader.ReadLine(), Field.Store.YES, Field.Index.NO));
+                        doc.Add(new Field("U", reader.ReadLine(), Field.Store.YES, Field.Index.NO));
                         break;
                     case ".T":
-                        doc.Add(new Field("T", reader.ReadLine(), Field.Store.YES, Field.Index.TOKENIZED));
+                        doc.Add(new Field("T", reader.ReadLine(), Field.Store.NO, Field.Index.TOKENIZED));
                         break;
                     case ".W":
                         doc.Add(new Field("W", reader.ReadLine(), Field.Store.NO, Field.Index.TOKENIZED));
                         break;
-                    case ".M":
+                 /*   case ".M":
                         doc.Add(new Field("M", reader.ReadLine(), Field.Store.NO, Field.Index.TOKENIZED));
-                        break;
+                        break;*/
                 }
                 linea = reader.ReadLine();
                 if (linea != null && linea[0] == '.' && linea[1] == 'I')
@@ -176,15 +172,52 @@ namespace TP
         [STAThread]
         public static void Main(String[] args)
         {
-            diccionario = new Dictionary<string, IList<string>>();
-            ObtenerResultadosDelQuery();
+            IList<Medicion> resultados;
+            
+            Medicion.Alfa = 1;
+            Medicion.K = 50;
+            
+            ProcesarArchivoResults();
             Indexar();
-            CalcularPrecision();
-            //Buscar();
+            resultados = Medir();
+            GrabarResultados(resultados);
+        }
+        private static Medicion MedirConsulta(string nombreDelQuery, string querystring, QueryParser qp, Searcher buscador)
+        {
+            Hits hits = EjecutarConsulta(qp, querystring, buscador);
+            return ObtenerMedicionDeLaConsulta(nombreDelQuery, hits);
+        }
+        private static Medicion ObtenerMedicionDeLaConsulta(string nombreDelQuery, Hits hits)
+        {
+            float itemsRelevantesDevueltosK = 0, itemsRelevantesDevueltosR = 0, itemsRelevantesDevueltos = 0;
+            IList<string> items;
+            float itemsDevueltos, itemsRelevantes;
+            ;
+            Document doc;
+
+            items = diccionario[nombreDelQuery];
+            itemsDevueltos = hits.Length();
+            itemsRelevantes = items.Count;
+
+            for (int i = 0, r = 0, k = 0; i < itemsDevueltos; i++,k++,r++)
+            {
+                doc = hits.Doc(i);
+                if (items.Contains(doc.GetField("U").StringValue()))
+                {
+                    itemsRelevantesDevueltos++;
+                    if (k < Medicion.K)
+                        itemsRelevantesDevueltosK++;
+
+                    if (r < itemsRelevantes)
+                        itemsRelevantesDevueltosR++;
+                }
+            }
+            return new Medicion(nombreDelQuery, itemsRelevantesDevueltosK, itemsRelevantesDevueltosR, itemsRelevantesDevueltos, itemsRelevantes, itemsDevueltos);
         }
 
-        private static void ObtenerResultadosDelQuery()
+        private static void ProcesarArchivoResults()
         {
+            diccionario = new Dictionary<string, IList<string>>();
             var reader = new StreamReader(archResults);
             string linea = reader.ReadLine();
             string[] pedazos;
@@ -202,12 +235,75 @@ namespace TP
         #endregion
     }
 
-    public class PrecisionRecallRPrecision
+    public class Medicion
     {
+        #region Variables de clase
+        public static float Alfa;
+        public static float K;
+        #endregion
+
         #region Variables de instancia
-        public float Precision;
-        public float Recall;
-        public float RPrecision;
+        public float DevueltosTotal;
+        public string NombreDelquery;
+        public float RelevantesDevueltos;
+        public float RelevantesDevueltosK;
+        public float RelevantesDevueltosR;
+        public float RelevantesTotal;
+        #endregion
+
+        #region Constructores
+        public Medicion(string nombreDelquery, float relevantesDevueltosK, float relevantesDevueltosR, float relevantesDevueltos, float relevantesTotal, float devueltosTotal)
+        {
+            NombreDelquery = nombreDelquery;
+            RelevantesDevueltosK = relevantesDevueltosK;
+            RelevantesDevueltosR = relevantesDevueltosR;
+            RelevantesDevueltos = relevantesDevueltos;
+            RelevantesTotal = relevantesTotal;
+            DevueltosTotal = devueltosTotal;
+        }
+        #endregion
+
+        #region Propiedades
+        public float Precision
+        {
+            get
+            {
+                return RelevantesDevueltos/DevueltosTotal;
+            }
+        }
+
+        public float Recall
+        {
+            get
+            {
+                return RelevantesDevueltos/RelevantesTotal;
+            }
+        }
+
+        public float FMeasure
+        {
+            get
+            {
+                return (1 + Alfa)*Recall*Precision/(Recall + (Alfa*Precision));
+            }
+        }
+
+        public float RPrecision
+        {
+            get
+            {
+                return RelevantesDevueltosR/RelevantesTotal;
+                ;
+            }
+        }
+
+        public float KPrecision
+        {
+            get
+            {
+                return RelevantesDevueltosK/K;
+            }
+        }
         #endregion
     }
 }
