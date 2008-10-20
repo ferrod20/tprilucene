@@ -12,12 +12,12 @@ namespace TP
     internal class Program
     {
         #region Variables de clase
-        internal static readonly string rutaTp1 = @"D:\Fer\Facultad\RI\TP1";
-        internal static readonly string archCorpus = Path.Combine(rutaTp1, "corpus");
-        internal static readonly string archQuerys = Path.Combine(rutaTp1, "querys");
-        internal static readonly string archResultadoDevuelto = Path.Combine(rutaTp1, "result.txt");
-        internal static readonly string archResults = Path.Combine(rutaTp1, "results");
-        internal static readonly string dirIndices = Path.Combine(rutaTp1, "Indices");        
+        internal static readonly string rutaData = @"D:\Fer\Facultad\RI\TP1\Data";
+        internal static readonly string archCorpus = Path.Combine(rutaData, "corpus");
+        internal static readonly string archQuerys = Path.Combine(rutaData, "querys");
+        internal static readonly string archResultadoDevuelto = Path.Combine(rutaData, "result.txt");
+        internal static readonly string archResults = Path.Combine(rutaData, "results");
+        internal static readonly string dirIndices = Path.Combine(rutaData, "Indices");        
         private static IDictionary<string, IList<string>> diccionario;
         #endregion
 
