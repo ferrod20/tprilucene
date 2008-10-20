@@ -1,0 +1,40 @@
+1:
+Promedio precision: 0,001270773
+Promedio recall: 0,9054621
+Promedio R-Precision: 0,3030052
+
+2:
+boost, 
+analyzer, 
+stopWords
+
+SimpleAnalyzer	SimpleAnalyzer seems to just use a Tokenizer that converts all of the input to lower case.
+
+StopAnalyzer	StopAnalyzer includes the lower-case filter, and also has a filter that drops out any "stop words", words like articles (a, an, the, etc) that occur so commonly in english that they might as well be noise for searching purposes. StopAnalyzer comes with a set of stop words, but you can instantiate it with your own array of stop words.
+
+StandardAnalyzer	StandardAnalyzer does both lower-case and stop-word filtering, and in addition tries to do some basic clean-up of words, for example taking out apostrophes ( ' ) and removing periods from acronyms (i.e. "T.L.A." becomes "TLA").
+
+
+a.KeywordAnalyzer
+"Tokenizes" the entire stream as a single token. This is useful for data like zip codes, ids, and some product names.
+
+
+b. PerFieldAnalyzerWrapper
+This analyzer is used to facilitate scenarios where different fields require different analysis techniques.  
+
+Example usage:
+PerFieldAnalyzerWrapper aWrapper =
+new PerFieldAnalyzerWrapper(new StandardAnalyzer());
+aWrapper.addAnalyzer("firstname", new KeywordAnalyzer());
+aWrapper.addAnalyzer("lastname", new KeywordAnalyzer());
+In this example, StandardAnalyzer will be used for all fields except "firstname" and "lastname", for which KeywordAnalyzer will be used.
+
+c.SimpleAnalyzer
+An Analyzer that filters LetterTokenizer with LowerCaseFilter. 
+
+d.StopAnalyzer
+Filters LetterTokenizer with LowerCaseFilter and StopFilter
+
+e.WhitespaceAnalyzer
+An Analyzer that uses WhitespaceTokenizer.
+3:
