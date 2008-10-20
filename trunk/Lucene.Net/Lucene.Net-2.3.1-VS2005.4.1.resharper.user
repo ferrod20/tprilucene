@@ -18,27 +18,27 @@
       <File id="F04CA2F4-E182-46A8-B914-F46AF5319E83/d:Index/f:IndexWriter.cs" caret="59103" scrollPosition="0|1551" />
       <File id="F04CA2F4-E182-46A8-B914-F46AF5319E83/d:QueryParser/f:QueryParser.cs" caret="7097" scrollPosition="0|165" />
       <File id="F04CA2F4-E182-46A8-B914-F46AF5319E83/d:Index/f:DocumentsWriter.cs" caret="16842" scrollPosition="0|510" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="8696" scrollPosition="0|83" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|83" />
     </RecentFiles>
     <RecentEdits>
       <File id="F04CA2F4-E182-46A8-B914-F46AF5319E83/f:AssemblyInfo.cs" caret="3652" scrollPosition="0|68" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="0|91" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="0|0" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="0|31" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="0|0" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|91" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|0" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|31" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|0" />
       <File id="F04CA2F4-E182-46A8-B914-F46AF5319E83/f:AssemblyInfo.cs" caret="1647" scrollPosition="0|16" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="0|16" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="0|37" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="0|0" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="0|50" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="0|39" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="0|69" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="0|48" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="10|7" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="0|71" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="9561" scrollPosition="0|72" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="3016" scrollPosition="0|11" />
-      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="5339" scrollPosition="0|67" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|16" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|37" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|0" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|50" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|39" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|69" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|48" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="10|7" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|71" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|72" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|11" />
+      <File id="C1AAC164-A914-416C-B031-AA84AFA6A130/f:Program.cs" caret="12897" scrollPosition="0|67" />
     </RecentEdits>
   </RecentFiles>
   <UnitTestRunner>
@@ -61,7 +61,7 @@
       <Item value="long" priority="0" />
       <Item value="while" priority="0" />
       <Item value="linea" priority="5" />
-      <Item value="if" priority="1" />
+      <Item value="if" priority="2" />
       <Item value="string" priority="1" />
       <Item value="private" priority="0" />
       <Item value="Collections" priority="0" />
@@ -75,23 +75,33 @@
       <Item value="IList" priority="0" />
       <Item value="List&lt;PrecisionRecallRPrecision&gt;" priority="0" />
       <Item value="int" priority="1" />
-      <Item value="itemsDevueltos" priority="1" />
+      <Item value="itemsDevueltos" priority="2" />
       <Item value="PrecisionRecallRPrecision" priority="0" />
       <Item value="valor" priority="1" />
-      <Item value="itemsRelevantesDevueltos" priority="1" />
+      <Item value="itemsRelevantesDevueltos" priority="4" />
       <Item value="query" priority="0" />
-      <Item value="itemsRelevantes" priority="0" />
-      <Item value="nombreDelQuery" priority="0" />
+      <Item value="itemsRelevantes" priority="3" />
+      <Item value="nombreDelQuery" priority="1" />
       <Item value="items" priority="0" />
-      <Item value="return" priority="0" />
+      <Item value="return" priority="5" />
       <Item value="foreach" priority="0" />
       <Item value="in" priority="0" />
-      <Item value="resultado" priority="0" />
+      <Item value="resultado" priority="5" />
       <Item value="totalPrecision" priority="1" />
       <Item value="Console" priority="0" />
-      <Item value="resultados" priority="0" />
+      <Item value="resultados" priority="1" />
       <Item value="totalRecall" priority="0" />
       <Item value="reader" priority="0" />
+      <Item value="RelevantesDevueltos" priority="0" />
+      <Item value="Precision" priority="1" />
+      <Item value="Recall" priority="0" />
+      <Item value="k" priority="2" />
+      <Item value="r" priority="0" />
+      <Item value="medicion" priority="2" />
+      <Item value="RelevantesTotal" priority="0" />
+      <Item value="totalFMeasure" priority="0" />
+      <Item value="itemsRelevantesDevueltosK" priority="0" />
+      <Item value="itemsRelevantesDevueltosR" priority="0" />
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.String">
       <Item value="StartsWith" priority="1" />
@@ -116,6 +126,20 @@
     </ItemStatistics>
     <ItemStatistics item="Qualified:System.IO.StreamReader">
       <Item value="ReadLine" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:TP.Medicion">
+      <Item value="K" priority="0" />
+      <Item value="RelevantesDevueltos" priority="0" />
+      <Item value="DevueltosTotal" priority="0" />
+      <Item value="Recall" priority="0" />
+      <Item value="RPrecision" priority="0" />
+      <Item value="KPrecision" priority="0" />
+      <Item value="FMeasure" priority="0" />
+      <Item value="Query" priority="0" />
+      <Item value="NombreDelquery" priority="0" />
+    </ItemStatistics>
+    <ItemStatistics item="Qualified:@TP.Medicion">
+      <Item value="Alfa" priority="0" />
     </ItemStatistics>
   </CompletionStatisticsManager>
 </Configuration>

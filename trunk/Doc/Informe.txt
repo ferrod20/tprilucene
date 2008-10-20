@@ -1,40 +1,53 @@
-1:
+1 y 2:
+Analyzer se utilizaron distintos Analyzer, algunos con stop words y otros sin stopwords
+
+a.KeywordAnalyzer
+Toma el query completo como si fuera un unico token.
+
+Promedio precision: NeuN
+Promedio recall: 0
+Promedio R-Precision: 0
+Promedio K-Precision: 0
+
+b. PerFieldAnalyzerWrapper
+Es una composición de los demás analizadores: posee la capacidad de utilizar distintos analizadores para distintos campos.
+Por ejemplo, permite generar una configuración como la siguiente: utilizar StandardAnalyzer para todos los campos, excepto para los campos "nombre" y "apellido", para los cuales utilizar KeywordAnalyzer.
+No se realizaron mediciones sobre este analizador.
+
+c.SimpleAnalyzer
+Convierte todo a minúscula. 
+
+Promedio precision: 0,0003822161
+Promedio recall: 0,9535294
+Promedio R-Precision: 0,273577
+Promedio K-Precision: 0,1190476 
+
+d.StopAnalyzer
+Convierte a minúscula y elimina todas las palabras definidas en el conjunto stop words. Palabras como articulos (a, an, the, etc) que tienen una ocurrencia comun en la mayoria de los lenguajes y que generan ruido en la busqueda.
+StopAnalyzer contiene un conjunto de stop words por defecto, permitiendo también generar stop words particulares.
+
+Promedio precision: 0,00141073
+Promedio recall: 0,9054621
+Promedio R-Precision: 0,2964229
+Promedio K-Precision: 0,1238095
+K=10
+
+e.WhitespaceAnalyzer
+Genera los tokens partiendo por espacios en blanco.
+
+Promedio precision: < 0,0003
+Promedio recall: 0,9134455
+Promedio R-Precision: 0,1941017
+Promedio K-Precision: 0,0822222
+
+f.StandardAnalyzer 
+Convierte a minúscula, elimina stop words y además intenta realizar uan limpieza de palabras, por ejemplo quitando los apóstrofes o eliminando los puntos; "U.B.A" se convierte en "UBA"
+
 Promedio precision: 0,001270773
 Promedio recall: 0,9054621
 Promedio R-Precision: 0,3030052
+Promedio K-Precision: 0,123492
 
-2:
-boost, 
-analyzer, 
-stopWords
+El mejor resultado obtenido fue con el standardAnalyzer
 
-SimpleAnalyzer	SimpleAnalyzer seems to just use a Tokenizer that converts all of the input to lower case.
-
-StopAnalyzer	StopAnalyzer includes the lower-case filter, and also has a filter that drops out any "stop words", words like articles (a, an, the, etc) that occur so commonly in english that they might as well be noise for searching purposes. StopAnalyzer comes with a set of stop words, but you can instantiate it with your own array of stop words.
-
-StandardAnalyzer	StandardAnalyzer does both lower-case and stop-word filtering, and in addition tries to do some basic clean-up of words, for example taking out apostrophes ( ' ) and removing periods from acronyms (i.e. "T.L.A." becomes "TLA").
-
-
-a.KeywordAnalyzer
-"Tokenizes" the entire stream as a single token. This is useful for data like zip codes, ids, and some product names.
-
-
-b. PerFieldAnalyzerWrapper
-This analyzer is used to facilitate scenarios where different fields require different analysis techniques.  
-
-Example usage:
-PerFieldAnalyzerWrapper aWrapper =
-new PerFieldAnalyzerWrapper(new StandardAnalyzer());
-aWrapper.addAnalyzer("firstname", new KeywordAnalyzer());
-aWrapper.addAnalyzer("lastname", new KeywordAnalyzer());
-In this example, StandardAnalyzer will be used for all fields except "firstname" and "lastname", for which KeywordAnalyzer will be used.
-
-c.SimpleAnalyzer
-An Analyzer that filters LetterTokenizer with LowerCaseFilter. 
-
-d.StopAnalyzer
-Filters LetterTokenizer with LowerCaseFilter and StopFilter
-
-e.WhitespaceAnalyzer
-An Analyzer that uses WhitespaceTokenizer.
-3:
+3.
