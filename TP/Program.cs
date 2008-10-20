@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using Lucene.Net.Analysis;
 using Lucene.Net.Analysis.Standard;
 using Lucene.Net.Documents;
 using Lucene.Net.Index;
@@ -12,44 +13,23 @@ namespace TP
     internal class Program
     {
         #region Variables de clase
-        internal static readonly string rutaData = @"C:\Fer\TpLucene\Data";// @"D:\Fer\Facultad\RI\TP1\Data";
+        internal static Analyzer analyzer;
+        internal static readonly string rutaData = @"D:\Fer\Facultad\RI\TP1\TP\Data";//@"C:\Fer\TpLucene\Data";
         internal static readonly string archCorpus = Path.Combine(rutaData, "corpus");
         internal static readonly string archQuerys = Path.Combine(rutaData, "querys");
-        internal static readonly string archResultadoDevuelto = Path.Combine(rutaData, "result.txt");
+        internal static string archResultadoDevuelto = Path.Combine(rutaData, "result.txt");
         internal static readonly string archResults = Path.Combine(rutaData, "results");
-        internal static readonly string dirIndices = Path.Combine(rutaData, "Indices");        
+        internal static string dirIndices = Path.Combine(rutaData, "Indices");        
         private static IDictionary<string, IList<string>> diccionario;
         #endregion
 
         #region Métodos
-        private static void Buscar()
-        {
-            //Analizadores sintacticos:----------------------------------------
-            //StopAnalyzer Elimina stop words
-            //WhitespaceAnalyzer divide el texto por espacios en blanco
-            //SimpleAnalyzer divide el texto donde no hay letras y convierte a minuscula
-            //StandardAnalyzer Elimina stop words y convierte a minuscula
 
-            //Hacer querys:----------------------------------------------------            
-            string querystring = "chomba saco sucio lego sucio comida camisa"; //"infusion";
-            var qp = new MultiFieldQueryParser(new[] {"W", "T"}, new StandardAnalyzer());
-            Query query = qp.Parse(querystring);
-
-            //Buscar-----------------------------------------------------------
-            var buscador = new IndexSearcher(dirIndices);
-            Hits hits = buscador.Search(query);
-            int hasta = Math.Min(hits.Length(), 10);
-            for (int i = 0; i < hasta; i++)
-            {
-                Document doc = hits.Doc(i);
-                Console.Out.WriteLine(i + "-" + doc.GetField("I").StringValue() + " (" + hits.Score(i) + ") [" + doc.GetField("T").StringValue() + "]");
-            }
-        }
         private static IList<Medicion> Medir()
         {
             IList<Medicion> resultados = new List<Medicion>();
             StreamReader reader = new StreamReader(archQuerys);
-            QueryParser parser = new MultiFieldQueryParser(new[] {"T", "W"}, new StandardAnalyzer());
+            QueryParser parser = new MultiFieldQueryParser(new[] {"T", "W"}, analyzer);
             Searcher indexSearcher = new IndexSearcher(dirIndices);
             string query = "", nombreDelQuery = "", linea = reader.ReadLine();
 
@@ -112,8 +92,8 @@ namespace TP
 
         private static void Indexar()
         {
-            var writer = new IndexWriter(dirIndices, new StandardAnalyzer(), true);
-            writer.SetMaxBufferedDocs(120);
+            var writer = new IndexWriter(dirIndices, analyzer, true);
+            writer.SetMaxBufferedDocs(110);
             var reader = new StreamReader(archCorpus);
             string linea = reader.ReadLine();
 
@@ -171,6 +151,33 @@ namespace TP
         }
         [STAThread]
         public static void Main(String[] args)
+        {
+            analyzer = new KeywordAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultKeywordAnalyzer.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesKeywordAnalyzer");        
+            IndexarYMedir();
+
+            analyzer = new SimpleAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultSimpleAnalyzer.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesSimpleAnalyzer");        
+            IndexarYMedir();
+
+            analyzer = new StopAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultStopAnalyzer.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesStopAnalyzer");        
+            IndexarYMedir();
+
+            analyzer = new WhitespaceAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultWhitespaceAnalyzer.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesWhitespaceAnalyzer");        
+            IndexarYMedir();
+
+            analyzer = new StandardAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultStandardAnalyzer.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesStandardAnalyzer");        
+            IndexarYMedir();            
+        }
+        private static void IndexarYMedir()
         {
             IList<Medicion> resultados;
             
