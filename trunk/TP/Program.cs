@@ -12,7 +12,7 @@ namespace TP
     internal class Program
     {
         #region Variables de clase
-        internal static readonly string rutaData = @"D:\Fer\Facultad\RI\TP1\Data";
+        internal static readonly string rutaData = @"C:\Fer\TpLucene\Data";// @"D:\Fer\Facultad\RI\TP1\Data";
         internal static readonly string archCorpus = Path.Combine(rutaData, "corpus");
         internal static readonly string archQuerys = Path.Combine(rutaData, "querys");
         internal static readonly string archResultadoDevuelto = Path.Combine(rutaData, "result.txt");
