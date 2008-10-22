@@ -49,9 +49,10 @@ namespace TP
         private static IList<Medicion> Medir()
         {
             IList<Medicion> resultados = new List<Medicion>();
-            StreamReader reader = new StreamReader(archQuerys);
+            StreamReader reader = new StreamReader(archQuerys);            
             QueryParser parser = new MultiFieldQueryParser(new[] {"T", "W"}, analyzer);
             Searcher indexSearcher = new IndexSearcher(dirIndices);
+            
             if(useAlternativeScoreFunction)
                 indexSearcher.SetSimilarity(new AlternativeScore());
             string query = "", nombreDelQuery = "", linea = reader.ReadLine();
@@ -69,6 +70,8 @@ namespace TP
                 }
                 linea = reader.ReadLine();
             }
+            indexSearcher.Close();
+            reader.Close();            
             return resultados;            
         }
         //Ejecuta la consulta y devuelve los Hits
@@ -76,8 +79,9 @@ namespace TP
         {
             Query query;
             Hits hits;
+            
             query = qp.Parse(querystring);
-            hits = buscador.Search(query);
+            hits = buscador.Search(query);            
             return hits;
         }
         //A partir de una lista de mediciones graba las mismas y su promedio en un archivo
@@ -128,6 +132,7 @@ namespace TP
         private static void Indexar()
         {            
             var writer = new IndexWriter(dirIndices, analyzer, true);
+            writer.SetMaxFieldLength(2000);
             if (useAlternativeScoreFunction)
                 writer.SetSimilarity(new AlternativeScore());
             writer.SetMaxBufferedDocs(110);
@@ -191,71 +196,105 @@ namespace TP
         [STAThread]
         public static void Main(String[] args)
         {
-            analyzer = new KeywordAnalyzer();
-            archResultadoDevuelto = Path.Combine(rutaData, "resultKeywordAnalyzer.txt");
-            dirIndices = Path.Combine(rutaData, "IndicesKeywordAnalyzer");
+            IndexarBuscarYMedirKeywordAnalyzer();
+            IndexarBuscarYMedirKeywordAnalyzerWithAlternativeScoringFunciton();
+            IndexarBuscarYMedirSimpleAnalyzer();
+            IndexarBuscarYMedirSimpleAnalyzerWithAlternativeScoringFunciton();
+            IndexarBuscarYMedirStopAnalyzer();
+            IndexarBuscarYMedirStopAnalyzerWithAlternativeScoringFunciton();
+            IndexarBuscarYMedirWhitespaceAnalyzer();
+            IndexarBuscarYWhitespaceKeywordAnalyzerWithAlternativeScoringFunciton();
+            IndexarBuscarYMedirStandardAnalyzer();
+            IndexarBuscarYMedirStandardAnalyzerWithAlternativeScoringFunciton();
+            IndexarBuscarYMedirStandardAnalyzerWithCustomStopWord();
+        }
+        private static void IndexarBuscarYMedirStandardAnalyzerWithCustomStopWord()
+        {
+            analyzer = new StandardAnalyzer(stopWords);
+            archResultadoDevuelto = Path.Combine(rutaData, "resultStandardAnalyzerWithCusomizedStopWords.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesStandardAnalyzerWithCusomizedStopWords");
             useAlternativeScoreFunction = false;
             IndexarBuscarYMedir();
-
-            analyzer = new KeywordAnalyzer();
-            archResultadoDevuelto = Path.Combine(rutaData, "resultKeywordAnalyzerWithAlternativeScoreFunction.txt");
-            dirIndices = Path.Combine(rutaData, "IndicesKeywordAnalyzerWithAlternativeScoreFunction");
-            useAlternativeScoreFunction = true;
-            IndexarBuscarYMedir();
-
-            analyzer = new SimpleAnalyzer();
-            archResultadoDevuelto = Path.Combine(rutaData, "resultSimpleAnalyzer.txt");
-            dirIndices = Path.Combine(rutaData, "IndicesSimpleAnalyzer");
-            useAlternativeScoreFunction = false;
-            IndexarBuscarYMedir();
-
-            analyzer = new SimpleAnalyzer();
-            archResultadoDevuelto = Path.Combine(rutaData, "resultSimpleAnalyzerWithAlternativeScoreFunction.txt");
-            dirIndices = Path.Combine(rutaData, "IndicesSimpleAnalyzerWithAlternativeScoreFunction");
-            useAlternativeScoreFunction = true;
-            IndexarBuscarYMedir();
-
-            analyzer = new StopAnalyzer();
-            archResultadoDevuelto = Path.Combine(rutaData, "resultStopAnalyzer.txt");
-            dirIndices = Path.Combine(rutaData, "IndicesStopAnalyzer");
-            useAlternativeScoreFunction = false;
-            IndexarBuscarYMedir();
-
-            analyzer = new StopAnalyzer();
-            archResultadoDevuelto = Path.Combine(rutaData, "resultStopAnalyzerWithAlternativeScoreFunction.txt");
-            dirIndices = Path.Combine(rutaData, "IndicesStopAnalyzerWithAlternativeScoreFunction");
-            useAlternativeScoreFunction = true;
-            IndexarBuscarYMedir();
-
-            analyzer = new WhitespaceAnalyzer();
-            archResultadoDevuelto = Path.Combine(rutaData, "resultWhitespaceAnalyzer.txt");
-            dirIndices = Path.Combine(rutaData, "IndicesWhitespaceAnalyzer");
-            useAlternativeScoreFunction = false;
-            IndexarBuscarYMedir();
-
-            analyzer = new WhitespaceAnalyzer();
-            archResultadoDevuelto = Path.Combine(rutaData, "resultWhitespaceAnalyzerWithAlternativeScoreFunction.txt");
-            dirIndices = Path.Combine(rutaData, "IndicesWhitespaceAnalyzerWithAlternativeScoreFunction");
-            useAlternativeScoreFunction = true;
-            IndexarBuscarYMedir();
-
-            analyzer = new StandardAnalyzer();
-            archResultadoDevuelto = Path.Combine(rutaData, "resultStandardAnalyzer.txt");
-            dirIndices = Path.Combine(rutaData, "IndicesStandardAnalyzer");
-            useAlternativeScoreFunction = false;
-            IndexarBuscarYMedir();
-
+        }
+        private static void IndexarBuscarYMedirStandardAnalyzerWithAlternativeScoringFunciton()
+        {
             analyzer = new StandardAnalyzer();
             archResultadoDevuelto = Path.Combine(rutaData, "resultStandardAnalyzerWithAlternativeScoreFunction.txt");
             dirIndices = Path.Combine(rutaData, "IndicesStandardAnalyzerWithAlternativeScoreFunction");
             useAlternativeScoreFunction = true;
             IndexarBuscarYMedir();
-
-            analyzer = new StandardAnalyzer(stopWords);
-            archResultadoDevuelto = Path.Combine(rutaData, "resultStandardAnalyzerWithCusomizedStopWords.txt");
-            dirIndices = Path.Combine(rutaData, "IndicesStandardAnalyzerWithCusomizedStopWords");
+        }
+        private static void IndexarBuscarYMedirStandardAnalyzer()
+        {
+            analyzer = new StandardAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultStandardAnalyzer.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesStandardAnalyzer");
             useAlternativeScoreFunction = false;
-            IndexarBuscarYMedir();            
+            IndexarBuscarYMedir();
+        }
+        private static void IndexarBuscarYWhitespaceKeywordAnalyzerWithAlternativeScoringFunciton()
+        {
+            analyzer = new WhitespaceAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultWhitespaceAnalyzerWithAlternativeScoreFunction.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesWhitespaceAnalyzerWithAlternativeScoreFunction");
+            useAlternativeScoreFunction = true;
+            IndexarBuscarYMedir();
+        }
+        private static void IndexarBuscarYMedirWhitespaceAnalyzer()
+        {
+            analyzer = new WhitespaceAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultWhitespaceAnalyzer.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesWhitespaceAnalyzer");
+            useAlternativeScoreFunction = false;
+            IndexarBuscarYMedir();
+        }
+        private static void IndexarBuscarYMedirStopAnalyzerWithAlternativeScoringFunciton()
+        {
+            analyzer = new StopAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultStopAnalyzerWithAlternativeScoreFunction.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesStopAnalyzerWithAlternativeScoreFunction");
+            useAlternativeScoreFunction = true;
+            IndexarBuscarYMedir();
+        }
+        private static void IndexarBuscarYMedirStopAnalyzer()
+        {
+            analyzer = new StopAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultStopAnalyzer.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesStopAnalyzer");
+            useAlternativeScoreFunction = false;
+            IndexarBuscarYMedir();
+        }
+        private static void IndexarBuscarYMedirSimpleAnalyzerWithAlternativeScoringFunciton()
+        {
+            analyzer = new SimpleAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultSimpleAnalyzerWithAlternativeScoreFunction.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesSimpleAnalyzerWithAlternativeScoreFunction");
+            useAlternativeScoreFunction = true;
+            IndexarBuscarYMedir();
+        }
+        private static void IndexarBuscarYMedirSimpleAnalyzer()
+        {
+            analyzer = new SimpleAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultSimpleAnalyzer.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesSimpleAnalyzer");
+            useAlternativeScoreFunction = false;
+            IndexarBuscarYMedir();
+        }
+        private static void IndexarBuscarYMedirKeywordAnalyzerWithAlternativeScoringFunciton()
+        {
+            analyzer = new KeywordAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultKeywordAnalyzerWithAlternativeScoreFunction.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesKeywordAnalyzerWithAlternativeScoreFunction");
+            useAlternativeScoreFunction = true;
+            IndexarBuscarYMedir();
+        }
+        private static void IndexarBuscarYMedirKeywordAnalyzer()
+        {
+            analyzer = new KeywordAnalyzer();
+            archResultadoDevuelto = Path.Combine(rutaData, "resultKeywordAnalyzer.txt");
+            dirIndices = Path.Combine(rutaData, "IndicesKeywordAnalyzer");
+            useAlternativeScoreFunction = false;
+            IndexarBuscarYMedir();
         }
         private static void IndexarBuscarYMedir()
         {

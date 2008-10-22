@@ -1,437 +1,437 @@
 OHSU1
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,000304924528
+Recall: 1
+R-Precision: 0,166666672
+K-Precision1: 0,2
+K-Precision2: 0,1
+F-Measure: 0,00060966314
 
 OHSU2
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00123762374
+Recall: 1
+R-Precision: 0,545454562
+K-Precision1: 0,5
+K-Precision2: 0,22
+F-Measure: 0,00247218786
 
 OHSU3
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00312677654
+Recall: 0,956521749
+R-Precision: 0,4347826
+K-Precision1: 0,8
+K-Precision2: 0,28
+F-Measure: 0,00623317761
 
 OHSU4
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00464285724
+Recall: 1
+R-Precision: 0,538461566
+K-Precision1: 0,5
+K-Precision2: 0,26
+F-Measure: 0,009242802
 
 OHSU5
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,0006560245
+Recall: 1
+R-Precision: 0,333333343
+K-Precision1: 0,2
+K-Precision2: 0,06
+F-Measure: 0,0013111888
 
 OHSU6
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,000410537119
+Recall: 1
+R-Precision: 0,333333343
+K-Precision1: 0,4
+K-Precision2: 0,12
+F-Measure: 0,0008207373
 
 OHSU7
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,0008899964
+Recall: 0,714285731
+R-Precision: 0,142857149
+K-Precision1: 0,1
+K-Precision2: 0,02
+F-Measure: 0,00177777768
 
 OHSU8
-Precision: NeuN
-Recall: 0
+Precision: 0,00212056958
+Recall: 0,875
 R-Precision: 0
 K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+K-Precision2: 0,04
+F-Measure: 0,00423088577
 
 OHSU9
-Precision: NeuN
-Recall: 0
+Precision: 0,00161492918
+Recall: 0,9
 R-Precision: 0
 K-Precision1: 0
 K-Precision2: 0
-F-Measure: NeuN
+F-Measure: 0,00322407321
 
 OHSU10
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00130914536
+Recall: 1
+R-Precision: 0,2857143
+K-Precision1: 0,2
+K-Precision2: 0,04
+F-Measure: 0,00261486741
 
 OHSU11
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00563380262
+Recall: 1
+R-Precision: 0,5
+K-Precision1: 0,4
+K-Precision2: 0,3
+F-Measure: 0,0112044811
 
 OHSU12
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,0005702338
+Recall: 1
+R-Precision: 0,5
+K-Precision1: 0,4
+K-Precision2: 0,08
+F-Measure: 0,00113981764
 
 OHSU13
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,001155052
+Recall: 1
+R-Precision: 0,333333343
+K-Precision1: 0,4
+K-Precision2: 0,3
+F-Measure: 0,00230743876
 
 OHSU14
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,000598712766
+Recall: 1
+R-Precision: 0,5
+K-Precision1: 0,4
+K-Precision2: 0,12
+F-Measure: 0,001196709
 
 OHSU15
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,0004682744
+Recall: 1
+R-Precision: 0,6666667
+K-Precision1: 0,4
+K-Precision2: 0,08
+F-Measure: 0,000936110446
 
 OHSU16
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00202871417
+Recall: 1
+R-Precision: 0,3846154
+K-Precision1: 0,3
+K-Precision2: 0,18
+F-Measure: 0,0040492136
 
 OHSU17
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,000622277556
+Recall: 1
+R-Precision: 0,25
+K-Precision1: 0,2
+K-Precision2: 0,08
+F-Measure: 0,00124378118
 
 OHSU18
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00150350819
+Recall: 1
+R-Precision: 0,3888889
+K-Precision1: 0,3
+K-Precision2: 0,24
+F-Measure: 0,003002502
 
 OHSU19
-Precision: NeuN
-Recall: 0
+Precision: 0,00135317992
+Recall: 0,142857149
 R-Precision: 0
 K-Precision1: 0
 K-Precision2: 0
-F-Measure: NeuN
+F-Measure: 0,002680965
 
 OHSU20
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,0007725985
+Recall: 0,857142866
+R-Precision: 0,142857149
+K-Precision1: 0,1
+K-Precision2: 0,04
+F-Measure: 0,00154380547
 
 OHSU21
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00168634066
+Recall: 1
+R-Precision: 0,523809552
+K-Precision1: 0,7
+K-Precision2: 0,3
+F-Measure: 0,00336700352
 
 OHSU22
-Precision: NeuN
-Recall: 0
+Precision: 0,000265322364
+Recall: 0,8333333
 R-Precision: 0
 K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+K-Precision2: 0,02
+F-Measure: 0,0005304758
 
 OHSU23
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00146627566
+Recall: 1
+R-Precision: 0,416666657
+K-Precision1: 0,5
+K-Precision2: 0,2
+F-Measure: 0,00292825769
 
 OHSU24
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00223048334
+Recall: 1
+R-Precision: 0,5
+K-Precision1: 0,6
+K-Precision2: 0,18
+F-Measure: 0,004451039
 
 OHSU25
-Precision: NeuN
-Recall: 0
+Precision: 0,000186063815
+Recall: 0,8
 R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+K-Precision1: 0,1
+K-Precision2: 0,02
+F-Measure: 0,0003720411
 
 OHSU26
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,000427533145
+Recall: 1
+R-Precision: 0,6666667
+K-Precision1: 0,5
+K-Precision2: 0,12
+F-Measure: 0,000854700862
 
 OHSU27
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,000215982727
+Recall: 1
+R-Precision: 0,5
+K-Precision1: 0,2
+K-Precision2: 0,04
+F-Measure: 0,000431872177
 
 OHSU28
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00466893055
+Recall: 0,846153855
+R-Precision: 0,3846154
+K-Precision1: 0,5
+K-Precision2: 0,16
+F-Measure: 0,009286619
 
 OHSU29
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00298465043
+Recall: 1
+R-Precision: 0,619047642
+K-Precision1: 0,8
+K-Precision2: 0,34
+F-Measure: 0,00595153775
 
 OHSU30
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00276344875
+Recall: 0,882352948
+R-Precision: 0,294117659
+K-Precision1: 0,4
+K-Precision2: 0,16
+F-Measure: 0,005509642
 
 OHSU31
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00139703823
+Recall: 0,2631579
+R-Precision: 0,105263159
+K-Precision1: 0,1
+K-Precision2: 0,04
+F-Measure: 0,00277932175
 
 OHSU32
-Precision: NeuN
-Recall: 0
-R-Precision: 0
+Precision: 0,0008708124
+Recall: 0,9444444
+R-Precision: 0,111111112
 K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+K-Precision2: 0,06
+F-Measure: 0,00174002047
 
 OHSU33
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,002802905
+Recall: 1
+R-Precision: 0,5
+K-Precision1: 0,4
+K-Precision2: 0,3
+F-Measure: 0,00559014129
 
 OHSU34
-Precision: NeuN
-Recall: 0
+Precision: 0,000269287731
+Recall: 0,8
 R-Precision: 0
 K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+K-Precision2: 0,04
+F-Measure: 0,000538394263
 
 OHSU35
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00238999026
+Recall: 0,8947368
+R-Precision: 0,2631579
+K-Precision1: 0,3
+K-Precision2: 0,16
+F-Measure: 0,00476724654
 
 OHSU36
-Precision: NeuN
-Recall: 0
+Precision: 0,00143266481
+Recall: 0,933333337
 R-Precision: 0
 K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+K-Precision2: 0,02
+F-Measure: 0,0028609382
 
 OHSU37
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00259698112
+Recall: 0,8888889
+R-Precision: 0,055555556
+K-Precision1: 0,1
+K-Precision2: 0,1
+F-Measure: 0,005178832
 
 OHSU38
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00182565034
+Recall: 1
+R-Precision: 0,3125
+K-Precision1: 0,5
+K-Precision2: 0,16
+F-Measure: 0,00364464684
 
 OHSU39
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00125825731
+Recall: 1
+R-Precision: 0,1875
+K-Precision1: 0,3
+K-Precision2: 0,1
+F-Measure: 0,002513352
 
 OHSU40
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00102485262
+Recall: 1
+R-Precision: 0,0833333358
+K-Precision1: 0,1
+K-Precision2: 0,04
+F-Measure: 0,00204760674
 
 OHSU41
-Precision: NeuN
-Recall: 0
+Precision: 0,0002742732
+Recall: 1
 R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+K-Precision1: 0,1
+K-Precision2: 0,04
+F-Measure: 0,000548395969
 
 OHSU42
-Precision: NeuN
-Recall: 0
+Precision: 0,000551192
+Recall: 1
 R-Precision: 0
 K-Precision1: 0
 K-Precision2: 0
-F-Measure: NeuN
+F-Measure: 0,00110177661
 
 OHSU43
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,0007214206
+Recall: 0,9285714
+R-Precision: 0,714285731
+K-Precision1: 0,7
+K-Precision2: 0,26
+F-Measure: 0,00144172111
 
 OHSU44
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,001965602
+Recall: 1
+R-Precision: 0,25
+K-Precision1: 0,2
+K-Precision2: 0,1
+F-Measure: 0,003923492
 
 OHSU45
-Precision: NeuN
-Recall: 0
+Precision: 0,0006266786
+Recall: 1
 R-Precision: 0
 K-Precision1: 0
 K-Precision2: 0
-F-Measure: NeuN
+F-Measure: 0,00125257217
 
 OHSU46
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,001381979
+Recall: 0,8333333
+R-Precision: 0,166666672
+K-Precision1: 0,1
+K-Precision2: 0,04
+F-Measure: 0,002759382
 
 OHSU47
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,002969562
+Recall: 1
+R-Precision: 0,3125
+K-Precision1: 0,5
+K-Precision2: 0,16
+F-Measure: 0,00592154
 
 OHSU48
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00410209643
+Recall: 1
+R-Precision: 0,222222224
+K-Precision1: 0,2
+K-Precision2: 0,1
+F-Measure: 0,008170676
 
 OHSU49
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,0007044025
+Recall: 1
+R-Precision: 0,2857143
+K-Precision1: 0,3
+K-Precision2: 0,14
+F-Measure: 0,0014078134
 
 OHSU50
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,002817695
+Recall: 1
+R-Precision: 0,2
+K-Precision1: 0,4
+K-Precision2: 0,08
+F-Measure: 0,00561955571
 
 OHSU51
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00263852254
+Recall: 1
+R-Precision: 0,2777778
+K-Precision1: 0,3
+K-Precision2: 0,24
+F-Measure: 0,005263158
 
 OHSU52
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,000561167253
+Recall: 1
+R-Precision: 0,6
+K-Precision1: 0,3
+K-Precision2: 0,06
+F-Measure: 0,001121705
 
 OHSU53
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,000853424368
+Recall: 0,6666667
+R-Precision: 0,166666672
+K-Precision1: 0,1
+K-Precision2: 0,06
+F-Measure: 0,00170466653
 
 OHSU54
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,00119456474
+Recall: 1
+R-Precision: 0,5
+K-Precision1: 0,4
+K-Precision2: 0,12
+F-Measure: 0,002386279
 
 OHSU55
-Precision: NeuN
+Precision: 0
 Recall: 0
 R-Precision: 0
 K-Precision1: 0
@@ -439,74 +439,74 @@ K-Precision2: 0
 F-Measure: NeuN
 
 OHSU56
-Precision: NeuN
-Recall: 0
+Precision: 0,00026856453
+Recall: 1
 R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+K-Precision1: 0,1
+K-Precision2: 0,04
+F-Measure: 0,0005369848
 
 OHSU57
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,000349344977
+Recall: 1
+R-Precision: 0,75
+K-Precision1: 0,3
+K-Precision2: 0,06
+F-Measure: 0,000698445947
 
 OHSU58
-Precision: NeuN
-Recall: 0
+Precision: 0,000217596287
+Recall: 1
 R-Precision: 0
 K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+K-Precision2: 0,02
+F-Measure: 0,0004350979
 
 OHSU59
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,0008855043
+Recall: 1
+R-Precision: 0,1
+K-Precision1: 0,1
+K-Precision2: 0,06
+F-Measure: 0,00176944176
 
 OHSU60
-Precision: NeuN
-Recall: 0
+Precision: 0,000368053
+Recall: 1
 R-Precision: 0
 K-Precision1: 0
 K-Precision2: 0
-F-Measure: NeuN
+F-Measure: 0,0007358352
 
 OHSU61
-Precision: NeuN
-Recall: 0
-R-Precision: 0
-K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+Precision: 0,0004814173
+Recall: 0,8333333
+R-Precision: 0,166666672
+K-Precision1: 0,1
+K-Precision2: 0,04
+F-Measure: 0,0009622787
 
 OHSU62
-Precision: NeuN
-Recall: 0
+Precision: 0,000777907437
+Recall: 1
 R-Precision: 0
 K-Precision1: 0
-K-Precision2: 0
-F-Measure: NeuN
+K-Precision2: 0,02
+F-Measure: 0,00155460555
 
 OHSU63
-Precision: NeuN
-Recall: 0
+Precision: 0,0003818251
+Recall: 0,25
 R-Precision: 0
 K-Precision1: 0
 K-Precision2: 0
-F-Measure: NeuN
+F-Measure: 0,000762485666
 
 
 Promedio
-Promedio precision: 0
-Promedio recall: 0
-Promedio R-Precision: 0
-Promedio K-Precision1: 0
-Promedio K-Precision2: 0
-Promedio F-Measure: 0
+Promedio precision: 0,00141073007
+Promedio recall: 0,9054621
+Promedio R-Precision: 0,264806479
+Promedio K-Precision1: 0,2555556
+Promedio K-Precision2: 0,107301556
+Promedio F-Measure: 0,00281371083
