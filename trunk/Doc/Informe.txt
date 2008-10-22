@@ -1,8 +1,12 @@
-1 y 2:
-Analyzer se utilizaron distintos Analyzer, algunos con stop words y otros sin stopwords
+a, b y d:
+Posibilidades del sistema:
+El sistema permite utilizar distintos Parsers, utilizando estrategias de tokenizacion que se describen abajo.
+También permite la implementación de stop words y asignación de peso al documento, al query y a los campos del documento.
+Algunos de los parsers ya contienen stop words por defecto.
+Se realizaron mediciones con cada uno de ellos utilizando el mismo parser tanto para indexar como para realizar la búsqueda.
 
 a.KeywordAnalyzer
-Toma el query completo como si fuera un unico token.
+Es un parser que toma el query completo como si fuera un unico token.
 
 Promedio precision: NeuN
 Promedio recall: 0
@@ -10,12 +14,12 @@ Promedio R-Precision: 0
 Promedio K-Precision: 0
 
 b. PerFieldAnalyzerWrapper
-Es una composición de los demás analizadores: posee la capacidad de utilizar distintos analizadores para distintos campos.
+Es una composición de los demás parsers: posee la capacidad de utilizar distintos analizadores para distintos campos.
 Por ejemplo, permite generar una configuración como la siguiente: utilizar StandardAnalyzer para todos los campos, excepto para los campos "nombre" y "apellido", para los cuales utilizar KeywordAnalyzer.
 No se realizaron mediciones sobre este analizador.
 
 c.SimpleAnalyzer
-Convierte todo a minúscula. 
+Es un parser que convierte todo a minúscula. 
 
 Promedio precision: 0,0003822161
 Promedio recall: 0,9535294
@@ -23,7 +27,7 @@ Promedio R-Precision: 0,273577
 Promedio K-Precision: 0,1190476 
 
 d.StopAnalyzer
-Convierte a minúscula y elimina todas las palabras definidas en el conjunto stop words. Palabras como articulos (a, an, the, etc) que tienen una ocurrencia comun en la mayoria de los lenguajes y que generan ruido en la busqueda.
+Es un parser que convierte a minúscula y elimina todas las palabras definidas en el conjunto stop words. Palabras como articulos (a, an, the, etc) que tienen una ocurrencia comun en la mayoria de los lenguajes y que generan ruido en la busqueda.
 StopAnalyzer contiene un conjunto de stop words por defecto, permitiendo también generar stop words particulares.
 
 Promedio precision: 0,00141073
@@ -33,7 +37,7 @@ Promedio K-Precision: 0,1238095
 K=10
 
 e.WhitespaceAnalyzer
-Genera los tokens partiendo por espacios en blanco.
+Es un parser que genera los tokens partiendo por espacios en blanco.
 
 Promedio precision: < 0,0003
 Promedio recall: 0,9134455
@@ -41,7 +45,7 @@ Promedio R-Precision: 0,1941017
 Promedio K-Precision: 0,0822222
 
 f.StandardAnalyzer 
-Convierte a minúscula, elimina stop words y además intenta realizar uan limpieza de palabras, por ejemplo quitando los apóstrofes o eliminando los puntos; "U.B.A" se convierte en "UBA"
+Es un parser que convierte a minúscula, elimina stop words y además intenta realizar uan limpieza de palabras, por ejemplo quitando los apóstrofes o eliminando los puntos; "U.B.A" se convierte en "UBA"
 
 Promedio precision: 0,001270773
 Promedio recall: 0,9054621
@@ -51,3 +55,27 @@ Promedio K-Precision: 0,123492
 El mejor resultado obtenido fue con el standardAnalyzer
 
 3.
+
+La lista de stop words es: "a", "an", "and", "are", "as", "at", "be", "but", "by", "for", "if", "in", "into", "is", "it", "no", "not", "of", "on", "or", "such", "that", "the", "their", "then", "there", "these", "they", "this", "to", "was", "will", "with"
+Es una lista en palabras comunes de idioma ingles que son poco relevantes para realizar busquedas, por lo tanto parece bastante adecuada para el corpus que manejamos.
+
+Score: Dado un query q y un documento d, la función de scoring por defecto es:
+score(q,d) = coord(q,d)*queryNorm(q)*sumatoria de los terminos t en el qeury q de( tf(t en d)*idf(t)2*peso(t)*norm(t,d) )
+
+Donde: 
+tf(t en d): raiz cuadrada de la frecuencia de t en d.
+idf(t): 1+ log(numDocs/docFreq+1) donde numDocs es la cantidad total de documentos y docFreq es la cantidad de documentos que contienen el termino t.
+coord(over,maxOver): over/maxOver donde over es el numero de terminos del query que encontrados en el documento y maxOver es el numero de terminos en el query
+queryNorm(q): 1/sumatoria del peso del termino t para todos los terminos t en el query q.
+norm(t,d): 1/raiz cuadrada del numero de terminos t que aparecen en d.
+
+
+Implementacion de scoring function: Heredar de defaultSimilarity
+tf = 1+log(freq)
+imp:	1+log(min(0, freq))
+idf= max(0, log(N-df/df) )
+imp: 
+if(numDOcs-docFreq <= 0 || docFreq <=0)
+	res = 0
+else
+	res =log(numDOcs-docFreq /docFreq)

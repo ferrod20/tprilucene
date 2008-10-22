@@ -125,6 +125,8 @@ namespace TP
             //Stults KR; Brown DD.
             #endregion
 
+            //var f = new Field("U", reader.ReadLine(), Field.Store.YES, Field.Index.NO);
+            //f.SetBoost();//peso
             var doc = new Document();
             while (linea != null)
             {
