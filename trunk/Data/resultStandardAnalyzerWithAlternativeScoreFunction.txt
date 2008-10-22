@@ -1,0 +1,512 @@
+OHSU1
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU2
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU3
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU4
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU5
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU6
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU7
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU8
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU9
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU10
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU11
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU12
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU13
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU14
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU15
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU16
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU17
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU18
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU19
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU20
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU21
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU22
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU23
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU24
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU25
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU26
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU27
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU28
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU29
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU30
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU31
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU32
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU33
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU34
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU35
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU36
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU37
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU38
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU39
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU40
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU41
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU42
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU43
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU44
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU45
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU46
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU47
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU48
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU49
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU50
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU51
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU52
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU53
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU54
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU55
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU56
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU57
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU58
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU59
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU60
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU61
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU62
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+OHSU63
+Precision: NeuN
+Recall: 0
+R-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: NeuN
+
+
+Promedio
+Promedio precision: 0
+Promedio recall: 0
+Promedio R-Precision: 0
+Promedio K-Precision1: 0
+Promedio K-Precision2: 0
+Promedio F-Measure: 0
