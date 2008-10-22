@@ -1,448 +1,512 @@
 OHSU1
-Precision: 0,0003005711
+Precision: 0,0003005711
 Recall: 1
-R-Precision: 0,1666667
-K-Precision: 0,1
-F-Measure: 0,0006009616
+R-Precision: 0,166666672
+K-Precision1: 0,1
+K-Precision2: 0,1
+F-Measure: 0,000600961561
 
 OHSU2
-Precision: 0,00109934
+Precision: 0,00109934038
 Recall: 1
-R-Precision: 0,5454546
-K-Precision: 0,2
-F-Measure: 0,002196266
+R-Precision: 0,545454562
+K-Precision1: 0,6
+K-Precision2: 0,2
+F-Measure: 0,00219626632
 
 OHSU3
-Precision: 0,003126777
-Recall: 0,9565217
-R-Precision: 0,4782609
-K-Precision: 0,3
-F-Measure: 0,006233178
+Precision: 0,00312677654
+Recall: 0,956521749
+R-Precision: 0,478260875
+K-Precision1: 0,8
+K-Precision2: 0,3
+F-Measure: 0,00623317761
 
 OHSU4
-Precision: 0,00409836
+Precision: 0,00409836043
 Recall: 1
-R-Precision: 0,6153846
-K-Precision: 0,26
+R-Precision: 0,615384638
+K-Precision1: 0,8
+K-Precision2: 0,26
 F-Measure: 0,008163265
 
 OHSU5
-Precision: 0,0006278778
+Precision: 0,0006278778
 Recall: 1
-R-Precision: 0,1666667
-K-Precision: 0,06
-F-Measure: 0,001254968
+R-Precision: 0,166666672
+K-Precision1: 0,2
+K-Precision2: 0,06
+F-Measure: 0,00125496753
 
 OHSU6
-Precision: 0,0003796988
+Precision: 0,000379698758
 Recall: 1
-R-Precision: 0,3333333
-K-Precision: 0,12
+R-Precision: 0,333333343
+K-Precision1: 0,4
+K-Precision2: 0,12
 F-Measure: 0,0007591093
 
 OHSU7
-Precision: 0,0008899964
-Recall: 0,7142857
-R-Precision: 0,1428571
-K-Precision: 0,04
-F-Measure: 0,001777778
+Precision: 0,0008899964
+Recall: 0,714285731
+R-Precision: 0,142857149
+K-Precision1: 0,2
+K-Precision2: 0,04
+F-Measure: 0,00177777768
 
 OHSU8
-Precision: 0,001977401
+Precision: 0,001977401
 Recall: 0,875
 R-Precision: 0
-K-Precision: 0,08
-F-Measure: 0,003945885
+K-Precision1: 0,1
+K-Precision2: 0,08
+F-Measure: 0,00394588476
 
 OHSU9
-Precision: 0,0009486666
+Precision: 0,0009486666
 Recall: 0,9
 R-Precision: 0
-K-Precision: 0,02
-F-Measure: 0,001895335
+K-Precision1: 0
+K-Precision2: 0,02
+F-Measure: 0,00189533539
 
 OHSU10
-Precision: 0,001309145
+Precision: 0,00130914536
 Recall: 1
 R-Precision: 0,2857143
-K-Precision: 0,08
-F-Measure: 0,002614867
+K-Precision1: 0,2
+K-Precision2: 0,08
+F-Measure: 0,00261486741
 
 OHSU11
-Precision: 0,004444445
+Precision: 0,00444444455
 Recall: 1
 R-Precision: 0,5
-K-Precision: 0,3
-F-Measure: 0,008849557
+K-Precision1: 0,6
+K-Precision2: 0,3
+F-Measure: 0,00884955749
 
 OHSU12
-Precision: 0,000580945
+Precision: 0,000580945
 Recall: 1
 R-Precision: 0,6666667
-K-Precision: 0,12
-F-Measure: 0,001161215
+K-Precision1: 0,4
+K-Precision2: 0,12
+F-Measure: 0,00116121536
 
 OHSU13
-Precision: 0,001129883
+Precision: 0,00112988276
 Recall: 1
-R-Precision: 0,3333333
-K-Precision: 0,3
+R-Precision: 0,333333343
+K-Precision1: 0,4
+K-Precision2: 0,3
 F-Measure: 0,002257215
 
 OHSU14
-Precision: 0,000806289
+Precision: 0,000806289
 Recall: 1
 R-Precision: 0,625
-K-Precision: 0,12
-F-Measure: 0,001611279
+K-Precision1: 0,5
+K-Precision2: 0,12
+F-Measure: 0,00161127886
 
 OHSU15
-Precision: 0,0004501801
+Precision: 0,000450180058
 Recall: 1
 R-Precision: 0,5
-K-Precision: 0,1
+K-Precision1: 0,4
+K-Precision2: 0,1
 F-Measure: 0,000899955
 
 OHSU16
-Precision: 0,001930215
+Precision: 0,00193021528
 Recall: 1
 R-Precision: 0,3846154
-K-Precision: 0,18
-F-Measure: 0,003852993
+K-Precision1: 0,4
+K-Precision2: 0,18
+F-Measure: 0,00385299348
 
 OHSU17
-Precision: 0,0006223744
+Precision: 0,000622374355
 Recall: 1
 R-Precision: 0,25
-K-Precision: 0,08
-F-Measure: 0,001243975
+K-Precision1: 0,2
+K-Precision2: 0,08
+F-Measure: 0,00124397455
 
 OHSU18
-Precision: 0,001453841
+Precision: 0,00145384052
 Recall: 1
-R-Precision: 0,3333333
-K-Precision: 0,28
-F-Measure: 0,00290346
+R-Precision: 0,333333343
+K-Precision1: 0,3
+K-Precision2: 0,28
+F-Measure: 0,00290345983
 
 OHSU19
-Precision: 0,00135318
-Recall: 0,1428571
+Precision: 0,00135317992
+Recall: 0,142857149
 R-Precision: 0
-K-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
 F-Measure: 0,002680965
 
 OHSU20
-Precision: 0,0007725985
-Recall: 0,8571429
+Precision: 0,0007725985
+Recall: 0,857142866
 R-Precision: 0,2857143
-K-Precision: 0,08
-F-Measure: 0,001543805
+K-Precision1: 0,2
+K-Precision2: 0,08
+F-Measure: 0,00154380547
 
 OHSU21
-Precision: 0,001637172
+Precision: 0,0016371716
 Recall: 1
-R-Precision: 0,4761905
-K-Precision: 0,3
-F-Measure: 0,003268991
+R-Precision: 0,476190478
+K-Precision1: 0,7
+K-Precision2: 0,3
+F-Measure: 0,00326899136
 
 OHSU22
-Precision: 0,0002635324
+Precision: 0,0002635324
 Recall: 0,8333333
-R-Precision: 0,1666667
-K-Precision: 0,04
-F-Measure: 0,0005268981
+R-Precision: 0,166666672
+K-Precision1: 0,1
+K-Precision2: 0,04
+F-Measure: 0,000526898133
 
 OHSU23
-Precision: 0,001411101
+Precision: 0,00141110062
 Recall: 1
-R-Precision: 0,4166667
-K-Precision: 0,2
-F-Measure: 0,002818224
+R-Precision: 0,416666657
+K-Precision1: 0,5
+K-Precision2: 0,2
+F-Measure: 0,00281822449
 
 OHSU24
-Precision: 0,002057613
+Precision: 0,002057613
 Recall: 1
 R-Precision: 0,5
-K-Precision: 0,18
+K-Precision1: 0,6
+K-Precision2: 0,18
 F-Measure: 0,004106776
 
 OHSU25
-Precision: 0,0001850053
+Precision: 0,000185005323
 Recall: 0,8
 R-Precision: 0,2
-K-Precision: 0,04
+K-Precision1: 0,1
+K-Precision2: 0,04
 F-Measure: 0,0003699251
 
 OHSU26
-Precision: 0,0004311584
+Precision: 0,000431158376
 Recall: 1
 R-Precision: 0,6666667
-K-Precision: 0,12
+K-Precision1: 0,4
+K-Precision2: 0,12
 F-Measure: 0,0008619451
 
 OHSU27
-Precision: 0,0002208481
+Precision: 0,000220848058
 Recall: 1
 R-Precision: 1
-K-Precision: 0,04
+K-Precision1: 0,2
+K-Precision2: 0,04
 F-Measure: 0,0004415986
 
 OHSU28
-Precision: 0,004144687
-Recall: 0,8461539
+Precision: 0,004144687
+Recall: 0,846153855
 R-Precision: 0,3846154
-K-Precision: 0,16
+K-Precision1: 0,4
+K-Precision2: 0,16
 F-Measure: 0,008248969
 
 OHSU29
-Precision: 0,002675159
+Precision: 0,00267515914
 Recall: 1
 R-Precision: 0,6666667
-K-Precision: 0,34
-F-Measure: 0,005336043
+K-Precision1: 0,9
+K-Precision2: 0,34
+F-Measure: 0,00533604342
 
 OHSU30
-Precision: 0,002763449
-Recall: 0,8823529
-R-Precision: 0,2352941
-K-Precision: 0,14
+Precision: 0,00276344875
+Recall: 0,882352948
+R-Precision: 0,235294119
+K-Precision1: 0,4
+K-Precision2: 0,14
 F-Measure: 0,005509642
 
 OHSU31
-Precision: 0,001135331
+Precision: 0,00113533146
 Recall: 0,2631579
-R-Precision: 0,1052632
-K-Precision: 0,06
-F-Measure: 0,002260909
+R-Precision: 0,105263159
+K-Precision1: 0,2
+K-Precision2: 0,06
+F-Measure: 0,00226090872
 
 OHSU32
-Precision: 0,0008494903
+Precision: 0,0008494903
 Recall: 0,9444444
-R-Precision: 0,1111111
-K-Precision: 0,04
-F-Measure: 0,001697454
+R-Precision: 0,111111112
+K-Precision1: 0,1
+K-Precision2: 0,04
+F-Measure: 0,00169745379
 
 OHSU33
-Precision: 0,002675748
+Precision: 0,002675748
 Recall: 1
-R-Precision: 0,4545455
-K-Precision: 0,3
+R-Precision: 0,454545468
+K-Precision1: 0,4
+K-Precision2: 0,3
 F-Measure: 0,005337215
 
 OHSU34
-Precision: 0,0002405002
+Precision: 0,000240500245
 Recall: 0,8
 R-Precision: 0
-K-Precision: 0,08
-F-Measure: 0,0004808559
+K-Precision1: 0,1
+K-Precision2: 0,08
+F-Measure: 0,000480855932
 
 OHSU35
-Precision: 0,002353919
+Precision: 0,00235391851
 Recall: 0,8947368
-R-Precision: 0,5789474
-K-Precision: 0,26
+R-Precision: 0,578947365
+K-Precision1: 0,8
+K-Precision2: 0,26
 F-Measure: 0,004695484
 
 OHSU36
-Precision: 0,001438258
-Recall: 0,9333333
+Precision: 0,00143825763
+Recall: 0,933333337
 R-Precision: 0
-K-Precision: 0,04
-F-Measure: 0,002872089
+K-Precision1: 0
+K-Precision2: 0,04
+F-Measure: 0,00287208939
 
 OHSU37
-Precision: 0,002073613
+Precision: 0,00207361323
 Recall: 0,8888889
-R-Precision: 0,3333333
-K-Precision: 0,22
+R-Precision: 0,333333343
+K-Precision1: 0,6
+K-Precision2: 0,22
 F-Measure: 0,004137574
 
 OHSU38
-Precision: 0,001324065
+Precision: 0,00132406491
 Recall: 1
 R-Precision: 0,4375
-K-Precision: 0,22
+K-Precision1: 0,5
+K-Precision2: 0,22
 F-Measure: 0,002644628
 
 OHSU39
-Precision: 0,001243394
+Precision: 0,00124339445
 Recall: 1
 R-Precision: 0,25
-K-Precision: 0,14
-F-Measure: 0,002483701
+K-Precision1: 0,3
+K-Precision2: 0,14
+F-Measure: 0,00248370063
 
 OHSU40
-Precision: 0,001016949
+Precision: 0,00101694919
 Recall: 1
-R-Precision: 0,3333333
-K-Precision: 0,1
+R-Precision: 0,333333343
+K-Precision1: 0,3
+K-Precision2: 0,1
 F-Measure: 0,002031832
 
 OHSU41
-Precision: 0,0002649006
+Precision: 0,000264900649
 Recall: 1
 R-Precision: 0
-K-Precision: 0,04
+K-Precision1: 0,2
+K-Precision2: 0,04
 F-Measure: 0,000529661
 
 OHSU42
-Precision: 0,0005691519
+Precision: 0,000569151947
 Recall: 1
 R-Precision: 0
-K-Precision: 0
-F-Measure: 0,001137656
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: 0,00113765639
 
 OHSU43
-Precision: 0,000725325
+Precision: 0,000725325
 Recall: 0,9285714
-R-Precision: 0,8571429
-K-Precision: 0,26
-F-Measure: 0,001449518
+R-Precision: 0,857142866
+K-Precision1: 0,9
+K-Precision2: 0,26
+F-Measure: 0,00144951779
 
 OHSU44
-Precision: 0,001965602
+Precision: 0,001965602
 Recall: 1
 R-Precision: 0,25
-K-Precision: 0,12
+K-Precision1: 0,2
+K-Precision2: 0,12
 F-Measure: 0,003923492
 
 OHSU45
-Precision: 0,0006197981
+Precision: 0,000619798142
 Recall: 1
 R-Precision: 0
-K-Precision: 0
-F-Measure: 0,001238828
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: 0,00123882841
 
 OHSU46
-Precision: 0,0009283327
+Precision: 0,000928332738
 Recall: 0,8333333
-R-Precision: 0,1666667
-K-Precision: 0,06
-F-Measure: 0,001854599
+R-Precision: 0,166666672
+K-Precision1: 0,1
+K-Precision2: 0,06
+F-Measure: 0,00185459945
 
 OHSU47
-Precision: 0,002561229
+Precision: 0,00256122928
 Recall: 1
 R-Precision: 0,5
-K-Precision: 0,16
+K-Precision1: 0,8
+K-Precision2: 0,16
 F-Measure: 0,005109372
 
 OHSU48
-Precision: 0,002513265
+Precision: 0,00251326454
 Recall: 1
-R-Precision: 0,2222222
-K-Precision: 0,08
+R-Precision: 0,222222224
+K-Precision1: 0,2
+K-Precision2: 0,08
 F-Measure: 0,005013928
 
 OHSU49
-Precision: 0,0007046507
+Precision: 0,0007046507
 Recall: 1
 R-Precision: 0,2857143
-K-Precision: 0,14
-F-Measure: 0,001408309
+K-Precision1: 0,3
+K-Precision2: 0,14
+F-Measure: 0,00140830909
 
 OHSU50
-Precision: 0,002327205
+Precision: 0,002327205
 Recall: 1
 R-Precision: 0,45
-K-Precision: 0,22
+K-Precision1: 0,4
+K-Precision2: 0,22
 F-Measure: 0,004643603
 
 OHSU51
-Precision: 0,002638523
+Precision: 0,00263852254
 Recall: 1
-R-Precision: 0,4444444
-K-Precision: 0,26
+R-Precision: 0,444444448
+K-Precision1: 0,5
+K-Precision2: 0,26
 F-Measure: 0,005263158
 
 OHSU52
-Precision: 0,0005217029
+Precision: 0,000521702867
 Recall: 1
 R-Precision: 0,2
-K-Precision: 0,06
-F-Measure: 0,001042862
+K-Precision1: 0,2
+K-Precision2: 0,06
+F-Measure: 0,00104286172
 
 OHSU53
-Precision: 0,0006205399
+Precision: 0,0006205399
 Recall: 0,6666667
-R-Precision: 0,1666667
-K-Precision: 0,08
-F-Measure: 0,001239926
+R-Precision: 0,166666672
+K-Precision1: 0,1
+K-Precision2: 0,08
+F-Measure: 0,00123992562
 
 OHSU54
-Precision: 0,001133144
+Precision: 0,00113314448
 Recall: 1
 R-Precision: 0,5
-K-Precision: 0,14
-F-Measure: 0,002263724
+K-Precision1: 0,4
+K-Precision2: 0,14
+F-Measure: 0,00226372387
 
 OHSU55
-Precision: 0
+Precision: 0
 Recall: 0
 R-Precision: 0
-K-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
 F-Measure: NeuN
 
 OHSU56
-Precision: 0,000254065
+Precision: 0,000254065031
 Recall: 1
 R-Precision: 0
-K-Precision: 0,04
+K-Precision1: 0
+K-Precision2: 0,04
 F-Measure: 0,000508001
 
 OHSU57
-Precision: 0,000349345
+Precision: 0,000349344977
 Recall: 1
 R-Precision: 0,75
-K-Precision: 0,08
-F-Measure: 0,0006984459
+K-Precision1: 0,3
+K-Precision2: 0,08
+F-Measure: 0,000698445947
 
 OHSU58
-Precision: 0,0002087973
+Precision: 0,000208797326
 Recall: 1
 R-Precision: 0
-K-Precision: 0
+K-Precision1: 0
+K-Precision2: 0
 F-Measure: 0,0004175075
 
 OHSU59
-Precision: 0,0008855043
+Precision: 0,0008855043
 Recall: 1
 R-Precision: 0,2
-K-Precision: 0,1
-F-Measure: 0,001769442
+K-Precision1: 0,2
+K-Precision2: 0,1
+F-Measure: 0,00176944176
 
 OHSU60
-Precision: 0,0003707594
+Precision: 0,00037075943
 Recall: 1
 R-Precision: 0
-K-Precision: 0,02
-F-Measure: 0,0007412441
+K-Precision1: 0
+K-Precision2: 0,02
+F-Measure: 0,000741244061
 
 OHSU61
-Precision: 0,0004099705
+Precision: 0,0004099705
 Recall: 0,8333333
-R-Precision: 0,1666667
-K-Precision: 0,06
+R-Precision: 0,166666672
+K-Precision1: 0,1
+K-Precision2: 0,06
 F-Measure: 0,0008195378
 
 OHSU62
-Precision: 0,0007317966
+Precision: 0,00073179655
 Recall: 1
 R-Precision: 0
-K-Precision: 0,02
-F-Measure: 0,001462523
+K-Precision1: 0
+K-Precision2: 0,02
+F-Measure: 0,00146252278
 
 OHSU63
-Precision: 0,0003123048
+Precision: 0,000312304823
 Recall: 0,25
 R-Precision: 0
-K-Precision: 0
-F-Measure: 0,0006238304
+K-Precision1: 0
+K-Precision2: 0
+F-Measure: 0,000623830361
 
 
 Promedio
-Promedio precision: 0,001270773
+Promedio precision: 0,00127077254
 Promedio recall: 0,9054621
-Promedio R-Precision: 0,3030052
-Promedio K-Precision: 0,123492
-Promedio F-Measure: NeuN
+Promedio R-Precision: 0,303005159
+Promedio K-Precision1: 0,306349218
+Promedio K-Precision2: 0,123492032
+Promedio F-Measure: 0,00253549125
